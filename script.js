@@ -21,6 +21,8 @@ function showView(viewId) {
         if(link) link.classList.add('active-link');
     }
     window.scrollTo(0, 0);
+    // Important: réinitialiser les écouteurs de clic après avoir changé de vue
+    initGallery(); 
 }
 
 Object.keys(views).forEach(id => {
@@ -31,10 +33,15 @@ Object.keys(views).forEach(id => {
 const modal = document.getElementById('modal');
 
 function initGallery() {
-    document.querySelectorAll('.gallery-item').forEach(item => {
+    // On cible uniquement les items de la section actuellement affichée
+    const activeSection = Object.values(views).find(v => v.style.display === 'block' || (v.id === 'view-gallery' && v.style.display !== 'none'));
+    if(!activeSection) return;
+
+    const items = activeSection.querySelectorAll('.gallery-item');
+    items.forEach((item, index) => {
         item.onclick = () => {
-            currentItems = Array.from(item.closest('section').querySelectorAll('.gallery-item'));
-            currentIndex = currentItems.indexOf(item);
+            currentItems = Array.from(items);
+            currentIndex = index;
             openModal();
         };
     });
@@ -76,4 +83,5 @@ document.onkeydown = (e) => {
     if(e.key === "Escape") closeModal();
 };
 
+// Initialisation au chargement
 initGallery();
