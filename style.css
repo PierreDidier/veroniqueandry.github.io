@@ -46,10 +46,15 @@ nav { display: flex; gap: 35px; align-items: center; }
 
 /* GRILLE */
 .content-view { max-width: var(--max-width); margin: 0 auto; padding: 40px 5% 100px; }
-.gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; }
+.gallery-grid { display: grid;grid-template-columns: repeat(4, 1fr);gap: 5px; grid-auto-flow: dense; /* NOUVEAU : Demande à la grille de combler les trous automatiquement */}
 .gallery-item { aspect-ratio: 1/1; overflow: hidden; cursor: pointer; background: #f7f7f7; }
 .gallery-item img { width: 95%; height: 95%; object-fit: cover; transition: 0.5s ease; }
 .gallery-item:hover img { transform: scale(1.03); }
+
+.gallery-item.vertical {
+    grid-row: span 2; /* L'image s'étendra sur 2 lignes de la grille */
+    aspect-ratio: auto; /* Annule le format carré pour prendre la nouvelle hauteur */
+}
 
 /* MODAL */
 .modal { display: none; position: fixed; z-index: 2000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,1.0); align-items: center; justify-content: center; }
