@@ -46,7 +46,7 @@ nav { display: flex; gap: 35px; align-items: center; }
 
 /* GRILLE */
 .content-view { max-width: var(--max-width); margin: 0 auto; padding: 40px 5% 100px; }
-.gallery-grid { display: grid;grid-template-columns: repeat(4, 1fr);gap: 5px; grid-auto-flow: dense; /* NOUVEAU : Demande à la grille de combler les trous automatiquement */}
+.gallery-grid { display: grid;grid-template-columns: repeat(3, 1fr);gap: 5px; grid-auto-flow: dense; /* NOUVEAU : Demande à la grille de combler les trous automatiquement */}
 .gallery-item { aspect-ratio: 1/1; overflow: hidden; cursor: pointer; background: #ffffff; }
 .gallery-item img { width: 95%; height: 95%; object-fit: cover; transition: 0.5s ease; }
 .gallery-item:hover img { transform: scale(1.03); }
