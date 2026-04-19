@@ -6,7 +6,10 @@ const views = {
     'nav-apropos': document.getElementById('view-about'),
     'link-feux-follets': document.getElementById('view-feux-follets'),
     'link-untitled': document.getElementById('view-untitled'),
-    'link-saisons': document.getElementById('view-saisons')
+    'link-saisons': document.getElementById('view-saisons'),
+    'link-verger': document.getElementById('view-verger'),
+    'link-verticales': document.getElementById('view-verticales')
+
 };
 
 function showView(viewId) {

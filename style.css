@@ -47,7 +47,7 @@ nav { display: flex; gap: 35px; align-items: center; }
 /* GRILLE */
 .content-view { max-width: var(--max-width); margin: 0 auto; padding: 40px 5% 100px; }
 .gallery-grid { display: grid;grid-template-columns: repeat(4, 1fr);gap: 5px; grid-auto-flow: dense; /* NOUVEAU : Demande à la grille de combler les trous automatiquement */}
-.gallery-item { aspect-ratio: 1/1; overflow: hidden; cursor: pointer; background: #f7f7f7; }
+.gallery-item { aspect-ratio: 1/1; overflow: hidden; cursor: pointer; background: #ffffff; }
 .gallery-item img { width: 95%; height: 95%; object-fit: cover; transition: 0.5s ease; }
 .gallery-item:hover img { transform: scale(1.03); }
 
@@ -62,8 +62,8 @@ nav { display: flex; gap: 35px; align-items: center; }
 .modal-content-wrapper { position: relative; width: 90%; max-width: 1000px; text-align: center; }
 .modal-content-wrapper img { max-height: 70vh; max-width: 100%; margin: 0 auto; box-shadow: 0 20px 50px rgba(0,0,0,0.08); }
 
-.modal-meta-container { display: flex; justify-content: center; align-items: center; gap: 40px; margin-top: 35px; border-top: 1px solid #eee; padding-top: 30px; }
-.meta-divider { width: 1px; height: 60px; background: #ddd; }
+.modal-meta-container { display: flex; justify-content: center; align-items: center; gap: 40px; margin-top: 35px; border-top: 1px solid #ffffff; padding-top: 30px; }
+.meta-divider { width: 1px; height: 60px; background: #ffffff; }
 .meta-left { text-align: right; flex: 1; }
 .meta-right { text-align: left; flex: 1; }
 .meta-left h3 { font-family: var(--font-serif); font-size: 1.8rem; font-weight: 400; }
@@ -109,7 +109,7 @@ nav { display: flex; gap: 35px; align-items: center; }
         top: 20px;
         right: 20px;
         z-index: 4000;
-        background: rgba(255,255,255,0.7); /* Fond léger pour visibilité sur images sombres */
+        background: rgba(255, 255, 255, 0.7); /* Fond léger pour visibilité sur images sombres */
         border-radius: 50%;
         width: 44px;
         height: 44px;
